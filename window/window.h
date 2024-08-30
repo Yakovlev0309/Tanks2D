@@ -7,15 +7,16 @@ class GLFWwindow;
 
 class Window
 {
-private:
+public:
     static GLFWwindow* window;
 
-public:
     static int init(int width, int height, const std::string& title);
     static void destroy();
     static void terminate();
 
     static bool isShouldClose();
+    static void setShouldClose(bool close);
+
     static void swapBuffers();
 };
 
